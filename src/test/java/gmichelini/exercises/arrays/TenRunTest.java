@@ -2,13 +2,13 @@ package gmichelini.exercises.arrays;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
-
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
 class TenRunTest {
-
     @Test
     void tenRun() {
-        System.out.println(Arrays.toString(TenRun.tenRun(new int[]{10,2,15,2,3,20,1})));
+        assertArrayEquals(new int[]{2, 10, 10, 10, 20, 20}, TenRun.tenRun(new int[]{2, 10, 3, 4, 20, 5}));
+        assertArrayEquals(new int[]{10, 10, 20, 20}, TenRun.tenRun(new int[]{10, 1, 20, 2}));
+        assertArrayEquals(new int[]{10, 10, 10, 20}, TenRun.tenRun(new int[]{10, 1, 9, 20}));
     }
 }

@@ -2,22 +2,20 @@ package gmichelini.exercises.arrays;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-
-class BubbleSortTest {
-
+public class BubbleSortTest {
     @Test
-    void bubbleSort() {
-        int[] v = {1,4,10,-1,0,3};
-        BubbleSort.bubbleSort(v);
-        System.out.println(Arrays.toString(v));
-    }
-    @Test
-    void bubbleSortCopy() {
-        int[] v = {1,4,10,-1,0,3};
-        int[] c = BubbleSort.bubbleSortCopy(v);
-        System.out.println(Arrays.toString(v));
-        System.out.println(Arrays.toString(c));
+    public void bubbleSort() {
+        int[] v1 = {6, 3, 4, 2};
+        BubbleSort.bubbleSort(v1);
+        assertArrayEquals(new int[]{2, 3, 4, 6}, v1);
+
+        int[] v2 = {1, 0, 0, 0};
+        BubbleSort.bubbleSort(v2);
+        assertArrayEquals(new int[]{0, 0, 0, 1}, v2);
+
+        assertArrayEquals(new int[]{2, 3, 4, 6}, BubbleSort.bubbleSortCopy(new int[]{6, 3, 4, 2}));
+        assertArrayEquals(new int[]{0, 0, 0, 1}, BubbleSort.bubbleSortCopy(new int[]{1, 0, 0, 0}));
     }
 }

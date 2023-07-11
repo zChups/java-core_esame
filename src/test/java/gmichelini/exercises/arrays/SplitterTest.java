@@ -2,13 +2,12 @@ package gmichelini.exercises.arrays;
 
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 
-
-class SplitterTest {
-
+public class SplitterTest {
     @Test
-    void splitter() {
-        System.out.println(Arrays.toString(Splitter.splitter(123)));
+    public void splitter() {
+        assertArrayEquals(new int[]{2, 3, 4, 4, 5, 6}, Splitter.splitter(234456));
+        assertArrayEquals(new int[]{9, 8, 7, 6, 5, 4}, Splitter.splitter(987654));
     }
 }

@@ -1,11 +1,15 @@
 package gmichelini.exercises.exceptions;
 
 import java.text.ParseException;
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 
 public class CheckIntervalBetweenDates {
     public static boolean checkIntervalBetweenDates(String begin, String end) throws ParseException {
-        LocalDateTime first = LocalDateTime.parse(begin);
-        return first.isBefore(LocalDateTime.parse(end));
+        LocalDate date1 = LocalDate.parse(begin);
+        LocalDate date2 = LocalDate.parse(end);
+
+        return date1.isBefore(date2);
+
     }
+
 }

@@ -2,16 +2,21 @@ package gmichelini.exercises.arrays;
 
 import org.junit.jupiter.api.Test;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class SearchArrayTest {
+    final String[] words = {"car", "boat", "bike", "plane"};
 
     @Test
-    void containsBruteForce() {
-        System.out.println(SearchArray.containsBruteForce(new String[]{"Ciao", "i'm", "michael"}, "Ciao"));
+    void searchBruteForce() {
+        assertTrue(SearchArray.containsBruteForce(words, "bike"));
+        assertFalse(SearchArray.containsBruteForce(words, "helicopter"));
     }
 
     @Test
-    void containsBinary() {
-        System.out.println(SearchArray.containsBinary(new String[]{"Ciao", "i'm", "michael"}, "michael"));
+    void searchBinary() {
+        assertTrue(SearchArray.containsBinary(words, "bike"));
+        assertFalse(SearchArray.containsBinary(words, "helicopter"));
     }
 }

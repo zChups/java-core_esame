@@ -1,16 +1,9 @@
 package gmichelini.exercises.arrays;
 
+import java.util.Arrays;
+
 public class CopyArray {
     public static double[] copyArray(double[] v){
-        double[] dst = new double[v.length];
-        System.arraycopy(v,0,dst,0,v.length);
-        return dst;
+        return Arrays.copyOf(v,v.length);
     }
-
-/*      
-    public static double[] copyArray(double[] src) {
-        double[] dst = new double[src.length];
-        System.arraycopy(src, 0, dst, 0, src.length);
-        return dst;
-    }*/
 }

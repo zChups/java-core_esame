@@ -1,17 +1,19 @@
 package gmichelini.exercises.exceptions;
 
 public class CheckLicencePlate {
-    public static void checkLicencePlate(String licence){
-        String alphas = licence.substring(0, 2) + licence.substring(5);
-        for (char c : alphas.toCharArray()){
-            if(!Character.isLetter(c)){
-                throw (new IllegalArgumentException("Not a letter " + c));
-            }
+    public static void checkLicencePlate(String licence) {
+        if (licence.length() != 7){
+            throw new IllegalArgumentException("Licence not valid");
         }
-        String digits = licence.substring(2,5);
-        for (char c : digits.toCharArray()){
-            if (!Character.isDigit(c)){
-                throw (new IllegalArgumentException("Not a digit " + c));
+        for (int i = 0; i < licence.length(); i++){
+            try{
+                if (i < 2 || i > 5){
+                    boolean digit = Character.isDigit(licence.charAt(i));
+                } else{
+                    boolean letter = Character.isLetter(licence.charAt(i));
+                }
+            }catch(IllegalArgumentException e){
+                throw new IllegalArgumentException("Symbol not valid " + licence.charAt(i));
             }
         }
     }

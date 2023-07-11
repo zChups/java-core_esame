@@ -1,7 +1,8 @@
 package gmichelini.exercises.collections;
 
 import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 import static gmichelini.exercises.collections.FromFile.getLines;
 import static gmichelini.exercises.collections.FromFile.lineToWords;

@@ -1,6 +1,7 @@
 package gmichelini.exercises.collections;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public class InvertMap {
     public static Map<String, Integer> invertMap(Map<Integer, String> src){

@@ -1,6 +1,8 @@
 package gmichelini.exercises.collections;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 
 public class ValuesKeys {
     public static boolean valuesKeys(Map<String, String> map){
