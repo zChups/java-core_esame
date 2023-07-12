@@ -9,7 +9,7 @@ public class DownSize {
 
         for(int counter = 1; stringIterator.hasNext(); counter++){
             stringIterator.next();
-            if (counter%2 == 0){
+            if (counter%n == 0){
                 stringIterator.remove();
             }
         }

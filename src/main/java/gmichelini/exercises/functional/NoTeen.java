@@ -8,5 +8,6 @@ public class NoTeen {
         return list.stream()
                 .filter(s -> s <= 12 || s >= 20)
                 .collect(Collectors.toList());
+
     }
 }
